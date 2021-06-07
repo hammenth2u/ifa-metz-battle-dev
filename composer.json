@@ -1,0 +1,15 @@
+{
+    "name": "mint/minijeu",
+    "description": "Mini jeu",
+    "authors": [
+        {
+            "name": "hammenth2u",
+            "email": "clara.hammenthienne@gmail.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "symfony/var-dumper": "^5.3",
+        "benoclock/alto-dispatcher": "^1.3"
+    }
+}
