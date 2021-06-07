@@ -12,6 +12,7 @@ class PlayerModel extends CoreModel{
     protected $postalcode;
     protected $gender;
     protected $score;
+    protected $pseudo;
 
     /**
      * Get the value of lastname
@@ -189,6 +190,26 @@ class PlayerModel extends CoreModel{
     public function setScore($score)
     {
         $this->score = $score;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of pseudo
+     */ 
+    public function getPseudo()
+    {
+        return $this->pseudo;
+    }
+
+    /**
+     * Set the value of pseudo
+     *
+     * @return  self
+     */ 
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
 
         return $this;
     }

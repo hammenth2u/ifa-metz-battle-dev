@@ -4,7 +4,7 @@
 // require_once __DIR__."/../models/Product.php";
 // require_once __DIR__."/../models/Brand.php";
 // require_once __DIR__."/../models/Type.php";
-
+require_once __DIR__."/../models/PlayerModel.php";
 /**
  * Classe permettant de retourner des données stockées dans la base de données
  */
@@ -66,6 +66,17 @@ class DBData {
     //     $model = $stmt->fetchObject("Category");
     //     return $model;
     // }
+
+    //Les 1000 meilleurs scores
+    public function getTopScores($page){
+        $offset = ($page-1)*10;
+        return $this->dbh->query("SELECT score, pseudo, email FROM player ORDER BY score DESC LIMIT 10 OFFSET ".$offset)->fetchObject("PlayerModel");
+    }
+
+    //Insérer un nouveau profil
+    public function addData($player){
+        $this->dbh->exec("INSERT INTO player ()");
+    }
     
     // /**
     //  * Méthode permettant de retourner les données sur une marque donnée
