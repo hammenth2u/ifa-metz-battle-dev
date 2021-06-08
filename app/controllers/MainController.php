@@ -11,9 +11,10 @@ class MainController extends CoreController {
     // public function legalMentions() {
     //     $this->show('legal');
     // }
-        public function newPlayer(){
+    public function newPlayer(){
             
-        }
+    }
+
     public function error() {
         // on modifie "l'enveloppe" HTTP pour changer le code de réponse
         // de base, le code est 200 (OK) mais ici on veut informer le client de son erreur
