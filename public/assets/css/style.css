@@ -3,6 +3,36 @@
     color: #fff;
 }
 
+.table-grey {
+  background-color: #f5f5f5;
+}
+.div-grey{
+  background-color: #f5f5f5;
+}
+
+.row-centered {
+  justify-content: center;
+}
+
+.table-p>tbody>tr>td, .table-p>tbody>tr>th, .table-p>tfoot>tr>td, .table-p>tfoot>tr>th, .table-p>thead>tr>td, .table-p>thead>tr>th {
+  padding: 15px;
+}
+
+.btn-large-custom {
+  width: 80%;
+  font-size: 50px!important;
+  vertical-align: center!important;
+  font-weight: bold!important;
+  background-color: #003580!important;
+  border-radius: 50px!important;
+}
+
+.uefa-logo {
+  margin-top: 50px!important;
+  max-width: 50%!important;
+  text-align: center;
+}
+ 
 .booking {
   background-color: #003580;
   color: #ffffff;
@@ -201,7 +231,6 @@
   
   #h {
     background: url(../img/header.jpg) no-repeat center top;
-    padding-top: 150px;
     text-align: center;
     background-attachment: relative;
     background-position: center center;
@@ -268,7 +297,7 @@
   
   .countdown {
     text-align: center;
-    margin-top: 72px;
+    margin: 20px;
   }
   
   .countdown-row {
