@@ -1,6 +1,6 @@
 <?php
 
-use CoreModel;
+require_once __DIR__."/CoreModel.php";
 class PlayerModel extends CoreModel{
 
     protected $lastname;
