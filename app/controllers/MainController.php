@@ -8,6 +8,11 @@ class MainController extends CoreController {
         $this->show('home');
     }
 
+    public function game() {
+        $this->show('game');
+    }
+
+
     // public function legalMentions() {
     //     $this->show('legal');
     // }
