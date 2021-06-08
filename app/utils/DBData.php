@@ -72,10 +72,24 @@ class DBData {
         $offset = ($page-1)*10;
         return $this->dbh->query("SELECT score, pseudo, email FROM player ORDER BY score DESC LIMIT 10 OFFSET ".$offset)->fetchObject("PlayerModel");
     }
+    //récupérer un profil à partir de l'adresse email
+    public function getDataFromMail($email){
+        return $this->dbh->query("SELECT * FROM player WHERE email = '{$email}'")->fetchObject("PlayerModel");
+    }
 
     //Insérer un nouveau profil
-    public function addData($player){
-        $this->dbh->exec("INSERT INTO player ()");
+    public function addData($player){;
+        $this->dbh->exec("INSERT INTO player (pseudo, lastname, firstname, birthdate, email, address, city, postalcode, gender, score, sharedtwitter, sharedfacebook) VALUES ('{$player->getPseudo()}','{$player->getLastName()}','{$player->getFirstName()}','{$player->getBirthdate()}','{$player->getEmail()}','{$player->getAddress()}','{$player->getCity()}','{$player->getPostalcode()}','{$player->getGender()}',{$player->getScore()},0,0)");
+    }
+
+    //Modifier un profil
+    public function editData($player){
+        $this->dbh->exec("UPDATE player SET pseudo = '{$player->getPseudo()}', lastname = '{$player->getLastname()}', firstname = '{$player->getFirstname()}', birthdate = '{$player->getBirthdate()}', address = '{$player->getAddress()}', city = '{$player->getCity()}', postalcode = '{$player->getPostalcode()}', gender = '{$player->getGender()}', score = {$player->getScore()}, sharedtwitter = {$player->getSharedTwitter()}, sharedfacebook = {$player->getSharedfacebook()} WHERE email = '{$player->getEmail()}'");
+    }
+
+    //Supprimer les données d'un profil dans la base
+    public function removeData($player){
+        $this->dbh->exec("DELETE FROM player WHERE email = '{$player->getEmail()}'");
     }
     
     // /**

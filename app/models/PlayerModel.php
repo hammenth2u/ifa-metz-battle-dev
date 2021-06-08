@@ -13,6 +13,8 @@ class PlayerModel extends CoreModel{
     protected $gender;
     protected $score;
     protected $pseudo;
+    protected $sharedtwitter;
+    protected $sharedfacebook;
 
     /**
      * Get the value of lastname
@@ -210,6 +212,46 @@ class PlayerModel extends CoreModel{
     public function setPseudo($pseudo)
     {
         $this->pseudo = $pseudo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of sharedtwitter
+     */ 
+    public function getSharedtwitter()
+    {
+        return $this->sharedtwitter;
+    }
+
+    /**
+     * Set the value of sharedtwitter
+     *
+     * @return  self
+     */ 
+    public function setSharedtwitter($sharedtwitter)
+    {
+        $this->sharedtwitter = $sharedtwitter;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of sharedfacebook
+     */ 
+    public function getSharedfacebook()
+    {
+        return $this->sharedfacebook;
+    }
+
+    /**
+     * Set the value of sharedfacebook
+     *
+     * @return  self
+     */ 
+    public function setSharedfacebook($sharedfacebook)
+    {
+        $this->sharedfacebook = $sharedfacebook;
 
         return $this;
     }
