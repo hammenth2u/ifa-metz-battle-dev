@@ -19,6 +19,13 @@ $router->setBasePath($_SERVER['BASE_URI']);
 // les routes des pages statiques
 $router->map('GET', '/', 'MainController::home');
 
+//routes de l'api
+$router->map('POST', '/api/player', 'MainController::newPlayer');
+$router->map('DELETE', '/api/player', 'MainController::deletePlayer');
+$router->map('GET', '/api/player', 'MainController::getPlayer');
+$router->map('GET', '/api/players', 'MainController::getLeaderboards');
+$router->map('PUT', '/api/player', 'MainController::updatePlayer');
+
 
 $match = $router->match();
 
