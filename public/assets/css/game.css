@@ -2,6 +2,8 @@
 .bkgc {
     background-image: 
         url('../img/but.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     height: 34vh;
     width: 72vw;
     position: absolute;
@@ -14,8 +16,8 @@
     position: relative;
     bottom: -250px;
     display: flex;
-    width: 50%;
-    margin-left: 15%;
+    width: 35%;
+    margin-left: 18%;
     justify-content: space-between;
     align-items: center;
     color : purple;
@@ -25,7 +27,7 @@
     position: relative;
     bottom: -80px;
     height: 15%;
-    width: 5%;
+    width: 2%;
     border:salmon 1px solid;
     z-index: 50;
     animation: 3s linear 1s infinite alternate slidein;
@@ -36,24 +38,24 @@
 }
 .partie{
     z-index:1;
-    color : white;
+    color : black;
     position : relative;
     bottom: -50px;
 }
 .win{
     z-index:1;
-    color : white;
+    color : black;
     position : relative;
     bottom: -70px;
 }
 
 @keyframes slidein {
 from {
-    margin-left: 50%;
+    margin-left: 25vw;
 }
 
 to {
-    margin-left: 20%;
+    margin-left: 45vw;
 }
 
 }
