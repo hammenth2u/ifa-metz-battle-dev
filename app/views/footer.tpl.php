@@ -45,6 +45,11 @@
   </footer>
 
   <!-- JS -->
+  <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/jquery/jquery.min.js"></script>
+  <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/php-mail-form/validate.js"></script>
+  <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/countdown/jquery.plugin.min.js"></script>
+  <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/countdown/jquery.countdown.min.js"></script>
   <script src="<?=$_SERVER['BASE_URI']?>/assets/js/app.js"></script>
 </body>
 
