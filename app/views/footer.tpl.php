@@ -52,6 +52,8 @@
   <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/countdown/jquery.plugin.min.js"></script>
   <script src="<?=$_SERVER['BASE_URI']?>/assets/lib/countdown/jquery.countdown.min.js"></script>
   <script src="<?=$_SERVER['BASE_URI']?>/assets/js/app.js"></script>
+  <script src="<?=$_SERVER['BASE_URI']?>/assets/js/game.js"></script>
+
 </body>
 
 </html>
