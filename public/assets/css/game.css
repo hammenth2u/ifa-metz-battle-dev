@@ -1,7 +1,7 @@
 
 .bkgc {
     background-image: 
-        url('textures/but.jpg');
+        url('../img/but.jpg');
     height: 34vh;
     width: 72vw;
     position: absolute;
