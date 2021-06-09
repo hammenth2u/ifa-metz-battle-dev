@@ -19,6 +19,7 @@ $router->setBasePath($_SERVER['BASE_URI']);
 // les routes des pages statiques
 $router->map('GET', '/', 'MainController::home');
 $router->map('GET', '/game', 'MainController::game');
+$router->map('GET', '/login', 'MainController::login');
 
 
 //routes de l'api

@@ -13,6 +13,10 @@ class MainController extends CoreController {
         $this->show('game');
     }
 
+    public function login() {
+        $this->show('login');
+    }
+
 
     // public function legalMentions() {
     //     $this->show('legal');
