@@ -75,6 +75,12 @@ class MainController extends CoreController {
         }
     }
 
+    public function connect(){
+        $conn = new DBData();
+        if($_GET['email']!=''&&$_GET['password']!=''){
+        }
+    }
+
     public function error() {
         // on modifie "l'enveloppe" HTTP pour changer le code de réponse
         // de base, le code est 200 (OK) mais ici on veut informer le client de son erreur
