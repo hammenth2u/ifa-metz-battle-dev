@@ -17,6 +17,10 @@ class MainController extends CoreController {
         $this->show('login');
     }
 
+    public function register() {
+        $this->show('register');
+    }
+
 
     // public function legalMentions() {
     //     $this->show('legal');
