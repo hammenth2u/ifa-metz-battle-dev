@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__."/CoreController.php";
-require_once "../utils/DBData.php";
+require_once "../app/utils/DBData.php";
 
 class MainController extends CoreController {
     // notre première action : la homepage
