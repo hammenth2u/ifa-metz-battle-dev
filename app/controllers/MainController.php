@@ -29,6 +29,7 @@ class MainController extends CoreController {
             $player->setLastname($_POST['lastname']);
             $player->setFirstname($_POST['firstname']);
             $player->setPseudo($_POST['pseudo']);
+            $player->setPassword($_POST['password']);
             $player->setGender($_POST['gender']);
             $player->setBirthdate($_POST['birthdate']);
             $player->setAddress($_POST['address']);
@@ -55,10 +56,31 @@ class MainController extends CoreController {
     public function getPlayer(){
         $conn = new DBData();
         if($_GET['email']!=""){
-            echo $conn->getDataFromMail($_GET['email']);
+            $player = $conn->getDataFromMail($_GET['email']);
+            if($player){
+                $data= [
+                    'message'=>'ok',
+                    'pseudo'=>$player->getPseudo(),
+                    'email'=>$player->getEmail(),
+                    'lastname'=>$player->getLastname(),
+                    'firstname'=>$player->getFirstname(),
+                    'gender'=>$player->getGender(),
+                    'birthdate'=>$player->getBirthdate(),
+                    'address'=>$player->getAddress(),
+                    'city'=>$player->getCity(),
+                    'postalcode'=>$player->getPostalcode(),
+                    'score'=>$player->getScore(),
+                    'sharedtwitter'=>$player->getSharedtwitter(),
+                    'sharedfacebook'=>$player->getSharedfacebook()
+                    ];
+                echo json_encode($data);
+            }
+            else{
+                echo json_encode(['message'=>'ko']);
+            }
         }
         else{
-            echo false;
+            echo json_encode(['message'=>'ko']);
         }
 
         
@@ -82,6 +104,31 @@ class MainController extends CoreController {
     public function connect(){
         $conn = new DBData();
         if($_GET['email']!=''&&$_GET['password']!=''){
+            $player = $conn->connectUser($_GET['email'],$_GET['password']);
+            if($player){
+                $data= [
+                    'message'=>'ok',
+                    'pseudo'=>$player->getPseudo(),
+                    'email'=>$player->getEmail(),
+                    'lastname'=>$player->getLastname(),
+                    'firstname'=>$player->getFirstname(),
+                    'gender'=>$player->getGender(),
+                    'birthdate'=>$player->getBirthdate(),
+                    'address'=>$player->getAddress(),
+                    'city'=>$player->getCity(),
+                    'postalcode'=>$player->getPostalcode(),
+                    'score'=>$player->getScore(),
+                    'sharedtwitter'=>$player->getSharedtwitter(),
+                    'sharedfacebook'=>$player->getSharedfacebook()
+                    ];
+                echo json_encode($data);
+            }
+            else{
+                echo json_encode(['message'=>'ko']);
+            }
+        }
+        else{
+            echo json_encode(['message'=>'ko']);
         }
     }
 

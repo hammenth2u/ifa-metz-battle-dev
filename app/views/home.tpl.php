@@ -3,7 +3,7 @@
       <div class="row row-centered">
         <div class="col-md-8 col-md-offset-2">
           <div class="row row-centered">
-            <img src="<?=$_SERVER['BASE_URI']?>/assets/img/uefa.png" class="uefa-logo"/>
+            <img src="<?=$url?>/assets/img/uefa.png" class="uefa-logo"/>
           </div>
           <h1>JEU CONCOURS</h1>
           <h5>GAGNEZ PLEIN DE TRUCS</h5>
@@ -87,7 +87,7 @@
       </div>
       /col-md-6
       <div class="col-md-6">
-        <img src="<?=$_SERVER['BASE_URI']?>/assets/img/browser.png" class="aligncenter" width="350">
+        <img src="<?=$url?>/assets/img/browser.png" class="aligncenter" width="350">
       </div>
       /col-md-6
     </div>

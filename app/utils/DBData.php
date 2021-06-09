@@ -91,6 +91,9 @@ class DBData {
     public function removeData($player){
         $this->dbh->exec("DELETE FROM player WHERE email = '{$player->getEmail()}'");
     }
+    public function connectUser($email, $password){
+        return $this->dbh->query("SELECT * FROM player WHERE email = '{$email}' AND password = '{$password}'")->fetchObject("PlayerModel");
+    }
     
     // /**
     //  * Méthode permettant de retourner les données sur une marque donnée

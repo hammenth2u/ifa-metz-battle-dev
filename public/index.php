@@ -14,7 +14,7 @@ $router = new AltoRouter();
 // j'éduque mon routeur
 // url de la requête = base path + route
 // ex : http://localhost/oclock/titan/s05/oshop/public/ma-page = http://localhost/oclock/titan/s05/oshop/public + /ma-page
-$router->setBasePath($_SERVER['BASE_URI']);
+$router->setBasePath('');
 
 // les routes des pages statiques
 $router->map('GET', '/', 'MainController::home');
@@ -28,6 +28,7 @@ $router->map('DELETE', '/api/player', 'MainController::deletePlayer');
 $router->map('GET', '/api/player', 'MainController::getPlayer');
 $router->map('GET', '/api/players', 'MainController::getLeaderboards');
 $router->map('PUT', '/api/player', 'MainController::updatePlayer');
+$router->map('GET', '/api/connect', 'MainController::connect');
 
 
 $match = $router->match();
