@@ -22,11 +22,11 @@ $router->map('GET', '/game', 'MainController::game');
 
 
 //routes de l'api
-$router->map('POST', '/api/player', 'MainController::newPlayer');
-$router->map('DELETE', '/api/player', 'MainController::deletePlayer');
-$router->map('GET', '/api/player', 'MainController::getPlayer');
-$router->map('GET', '/api/players', 'MainController::getLeaderboards');
-$router->map('PUT', '/api/player', 'MainController::updatePlayer');
+// $router->map('POST', '/api/player', 'MainController::newPlayer');
+// $router->map('DELETE', '/api/player', 'MainController::deletePlayer');
+// $router->map('GET', '/api/player', 'MainController::getPlayer');
+// $router->map('GET', '/api/players', 'MainController::getLeaderboards');
+// $router->map('PUT', '/api/player', 'MainController::updatePlayer');
 
 
 $match = $router->match();
