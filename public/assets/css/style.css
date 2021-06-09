@@ -3,6 +3,14 @@
     color: #fff;
 }
 
+.booking {
+  background-color: #003580;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
 /*	################################################################
 	1. GENERAL STRUCTURES
 ################################################################# */
