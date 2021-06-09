@@ -96,7 +96,7 @@
 </container> -->
 
 
-  <div class="mb-5 p-3 text-center div-grey">
+  <div id="contact" class="mb-5 p-3 text-center div-grey">
     <h2 class="centered">Formulaire de contact</h2>
   </div>
   <div id="contact p-0">
