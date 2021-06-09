@@ -2,8 +2,11 @@
 
 
 <div id='app'>
-    <div v-if="game === false" class="button_start">
+    <div v-if="game === false && restart === false" class="button_start">
         <button class='start btn btn-primary ' v-on:click="start(true)"> START </button>
+    </div>
+    <div v-if="game === false && restart === true" class="button_start">
+        <button class='start btn btn-primary ' v-on:click="restart_function(true)"> Re-essayer </button>
     </div>
     <div v-if='game'>
         <div class="bkgc">
@@ -25,7 +28,12 @@
             </div>
 
             <div class="container_goal">
-                <div class="goal"> <img class="goal_img" src="<?=$url?>/assets/img/goal.png"/> </div>
+                <div class="goal"> 
+                    <img class="goal_img" v-if="goal" src="<?=$url?>/assets/img/goal.png"/> </div>
+                    <img class="goal_left" v-if="goal_left" src="<?=$url?>/assets/img/goal_left.png"/>
+                    <img class="goal_center" v-if="goal_center" src="<?=$url?>/assets/img/goal_center.png"/>
+                    <img class="goal_right" v-if="goal_right" src="<?=$url?>/assets/img/goal_right.png"/>
+                    <img class="goal_win" v-if="goal_win" src="<?=$url?>/assets/img/goal_win.png"/>
             </div>
         </div>
     </div>
