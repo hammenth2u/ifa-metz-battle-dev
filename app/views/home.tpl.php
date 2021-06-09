@@ -64,7 +64,6 @@
         <td>Bisou sur la tête à Zizou</td>
         <td>
           <ul>
-            <li>Son gros crâne chauve là</li>
             <li>Une gaufre au Nutella offerte</li>
           </ul>
         </td>
