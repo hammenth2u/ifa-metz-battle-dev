@@ -15,10 +15,13 @@
             <div v-if="lost" class="result">
                 <img src="<?=$url?>/assets/img/lost.png" alt="lost image" />
             </div>
+            <div class="ball_container" v-if="shoot">
+                <img class="ball" src="<?=$url?>/assets/img/ball.png" alt="ballon" />
+            </div>
             <div class="fleche">
-                <button type="button" class="btn btn-success btn-lg" v-on:click="choiceDirection('left')"> &larr; </button>
-                <button type="button" class="btn btn-success btn-lg" v-on:click="choiceDirection('center')"> &uarr; </button>
-                <button type="button" class="btn btn-success btn-lg" v-on:click="choiceDirection('rigth')"> &rarr; </button>
+                <img class="fleche_item" src="<?=$url?>/assets/img/left.png" alt='fleche gauche' v-on:click="choiceDirection('left')" />   
+                <img class="fleche_item" src="<?=$url?>/assets/img/center.png" alt='fleche central' v-on:click="choiceDirection('center')" />   
+                <img class="fleche_item" src="<?=$url?>/assets/img/right.png" alt='fleche droite' v-on:click="choiceDirection('rigth')" />
             </div>
 
             <div class="container_goal">
