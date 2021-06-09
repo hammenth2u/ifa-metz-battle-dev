@@ -26,6 +26,7 @@ $('.loginForm').submit((event)=>{
                 user['sharedfacebook'] = data.sharedfacebook;
                 user['sharedtwitter'] = data.sharedtwitter;
                 window.sessionStorage.setItem('user',user);
+                window.location.href('/game');
                 
             }
             else{
