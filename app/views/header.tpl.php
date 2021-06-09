@@ -22,6 +22,8 @@
  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
   <link rel="stylesheet" href="<?=$url?>/assets/css/game.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- Jquery -->
+  <script src="<?=$url?>/assets/lib/jquery/jquery.min.js"></script>
 
   <title>MiniJeu</title>
 </head>

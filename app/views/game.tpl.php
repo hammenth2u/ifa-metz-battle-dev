@@ -15,3 +15,4 @@
         </div>
     </div>
 </div>
+<script src="<?=$url?>/assets/js/game.js"></script>
