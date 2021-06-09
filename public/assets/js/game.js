@@ -11,8 +11,10 @@ var app = new Vue({
     },
     methods: {
         choiceDirection(direction) {
+            if (this.nb_partie === 5 && this.nb_win > 2) {
+                window.location.href = '/register'
+            }
             this.shoot = true 
-
             setTimeout(() => {
                 if (this.win || this.lost) {
                     this.win = false 
@@ -44,7 +46,7 @@ var app = new Vue({
                     setTimeout(() => this.win = false , 2000)
                 }
             },
-                2000)
+                1000)
             
             
         },
