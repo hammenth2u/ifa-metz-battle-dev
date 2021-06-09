@@ -1,31 +1,33 @@
 
+#app {
+    height: 80%;
+    width: 100%;
+}
+
 .bkgc {
+    height: 80%;
+    width: 100%;
     background-image: 
         url('../img/but.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    height: 34vh;
-    width: 72vw;
+    background-size: 70% 90%;
     position: absolute;
     z-index: 1;
 }
-#app {
-    height: 50vh;
-}
+
 .fleche{
-    position: relative;
-    bottom: -250px;
+    position: absolute;
+    top: 80%;
     display: flex;
-    width: 35%;
-    margin-left: 18%;
-    justify-content: space-between;
-    align-items: center;
-    color : purple;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
     z-index: 50;
 }
 .goal{
-    position: relative;
-    bottom: -80px;
+    position: absolute;
+    top: 50%;
     height: 15%;
     width: 2%;
     border:salmon 1px solid;
@@ -38,24 +40,28 @@
 }
 .partie{
     z-index:1;
-    color : black;
-    position : relative;
-    bottom: -50px;
+    color : white;
+    position : absolute;
+    top: 10%;
+    left: 18%;
+    font-size: 100%;
 }
 .win{
     z-index:1;
-    color : black;
-    position : relative;
-    bottom: -70px;
+    color : white;
+    position : absolute;
+    top: 20%;
+    left: 18%;
+    font-size: 100%;
+
 }
 
 @keyframes slidein {
 from {
-    margin-left: 25vw;
+    margin-left: 32vw;
 }
 
 to {
-    margin-left: 45vw;
+    margin-left: 65vw;
 }
-
 }
