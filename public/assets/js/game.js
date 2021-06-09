@@ -17,9 +17,6 @@ var app = new Vue({
     },
     methods: {
         choiceDirection(direction) {
-            if (this.nb_partie === 5 && this.nb_win > 2) {
-                window.location.href = '/register'
-            }
             this.shoot = true
             this.goal = false 
             setTimeout(() => {
