@@ -45,13 +45,12 @@
   </footer>
 
   <!-- JS -->
-  <script src="<?=$url?>/assets/lib/jquery/jquery.min.js"></script>
   <script src="<?=$url?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="<?=$url?>/assets/lib/php-mail-form/validate.js"></script>
   <script src="<?=$url?>/assets/lib/countdown/jquery.plugin.min.js"></script>
   <script src="<?=$url?>/assets/lib/countdown/jquery.countdown.min.js"></script>
   <script src="<?=$url?>/assets/js/app.js"></script>
-  <script src="<?=$url?>/assets/js/game.js"></script>
+  <script src="<?=$url?>/assets/js/login.js"></script>
 
 </body>
 

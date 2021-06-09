@@ -22,8 +22,67 @@
  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
   <link rel="stylesheet" href="<?=$url?>/assets/css/game.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- Jquery -->
+  <script src="<?=$url?>/assets/lib/jquery/jquery.min.js"></script>
 
   <title>MiniJeu</title>
+
+  <script src="<?=$url?>/assets/js/tarteaucitron.js/tarteaucitron.js"></script>
+
+<script>
+tarteaucitron.init({
+    "privacyUrl": "", /* Privacy policy url */
+
+    "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+    "cookieName": "tarteaucitron", /* Cookie name */
+
+    "orientation": "middle", /* Banner position (top - bottom - middle - popup) */
+
+    "groupServices": false, /* Group services by category */
+
+    "showAlertSmall": false, /* Show the small banner on bottom right */
+    "cookieslist": false, /* Show the cookie list */
+    
+    "showIcon": true, /* Show cookie icon to manage cookies */
+    // "iconSrc": "", /* Optionnal: URL or base64 encoded image */
+    "iconPosition": "BottomRight", /* Position of the icon between BottomRight, BottomLeft, TopRight and TopLeft */
+
+    "adblocker": false, /* Show a Warning if an adblocker is detected */
+
+    "DenyAllCta" : true, /* Show the deny all button */
+    "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+    "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
+
+    "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+    "removeCredit": false, /* Remove credit link */
+    "moreInfoLink": true, /* Show more info link */
+    "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+
+    //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for subdomain website */
+
+    "readmoreLink": "", /* Change the default readmore link pointing to tarteaucitron.io */
+    
+    "mandatory": true /* Show a message about mandatory cookies */
+});
+
+tarteaucitron.services.mycustomservice = {
+  "key": "mycustomservice",
+  "type": "ads|analytic|api|comment|other|social|support|video",
+  "name": "MyCustomService",
+  "needConsent": true,
+  "cookies": ['cookie', 'cookie2'],
+  "readmoreLink": "/custom_read_more", // If you want to change readmore link
+  "js": function () {
+    "use strict";
+    // When user allow cookie
+  },
+  "fallback": function () {
+    "use strict";
+    // when use deny cookie
+  }
+};
+</script>
 </head>
 
 <body>

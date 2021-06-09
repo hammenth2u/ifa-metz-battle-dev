@@ -45,12 +45,12 @@ button{
 <div class="col-md-6 bg-white p-5">
 <h3 class="pb-3">Veuillez vous connecter</h3>
 <div class="form-style">
-<form>
+<form class="loginForm">
   <div class="form-group pb-3">    
-    <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">   
+    <input type="email" placeholder="Email" class="form-control loginEmail" id="exampleInputEmail1" aria-describedby="emailHelp" name='email'>   
   </div>
   <div class="form-group pb-3">   
-    <input type="password" placeholder="Mot de passe" class="form-control" id="exampleInputPassword1">
+    <input type="password" placeholder="Mot de passe" class="form-control loginPassword" id="exampleInputPassword1" name="password">
   </div>
   <div class="d-flex align-items-center justify-content-between">
 <div><a href="#">Mot de passe oublié?</a></div>
