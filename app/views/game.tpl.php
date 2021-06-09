@@ -3,7 +3,7 @@
 
 <div id='app'>
     <div v-if="game === false" class="button_start">
-        <button class='btn btn-primary' v-on:click="start(true)"> START </button>
+        <button class='start btn btn-primary ' v-on:click="start(true)"> START </button>
     </div>
     <div v-if='game'>
         <div class="bkgc">
