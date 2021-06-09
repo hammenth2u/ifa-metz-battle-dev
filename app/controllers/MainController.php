@@ -41,6 +41,10 @@ class MainController extends CoreController {
             $player->setPostalcode($_POST['postalcode']);
             $player->setScore($_POST['score']);
             $conn->addData($player);
+            echo json_encode(['message'=>'ok']);
+        }
+        else{
+            echo json_encode(['message'=>'ko']);
         }
     }
     public function updatePlayer(){
