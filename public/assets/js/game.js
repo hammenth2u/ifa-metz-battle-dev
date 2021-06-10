@@ -76,7 +76,7 @@ var app = new Vue({
             this.goal_left = false 
             this.goal_win = false 
             if (this.nb_partie === 5 && this.nb_win > 2) {
-                window.location.href = '/register'
+                window.location.href = 'ifa-metz-battle-dev/public/register'
             }
             if (this.nb_partie === 5 && this.nb_win < 3) {
                 this.restart = true
@@ -85,7 +85,7 @@ var app = new Vue({
         },
         restart_function(value){
             this.restart = false
-            window.location.href='/game'
+            window.location.href='ifa-metz-battle-dev/public/game'
         }
     }
   })
