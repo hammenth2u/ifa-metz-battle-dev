@@ -14,7 +14,7 @@ $router = new AltoRouter();
 // j'éduque mon routeur
 // url de la requête = base path + route
 // ex : http://localhost/oclock/titan/s05/oshop/public/ma-page = http://localhost/oclock/titan/s05/oshop/public + /ma-page
-$router->setBasePath('');
+$router->setBasePath($_SERVER['BASE_URI']);
 
 // les routes des pages statiques
 $router->map('GET', '/', 'MainController::home');

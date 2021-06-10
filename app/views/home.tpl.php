@@ -24,6 +24,31 @@
     <!--/container-->
   </div>
   <!--/H-->
+  <div class="mb-5 p-3 text-center div-grey">
+      <h2 class="centered">Guide de participation</h2>
+  </div>
+  <div class="row mb-3">
+  <div class="col-sm-4">
+    <div style="display:block" class="text-center block">
+      <img width="100px" src="<?=$url?>/assets/img/btn-play.png" alt="">
+      <p style="font-weight:700; text-transform:uppercase">Jouer</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div style="display:block" class="text-center block">
+      <img width="80px" src="<?=$url?>/assets/img/btn-register.png" alt="">
+      <p style="font-weight:700; text-transform:uppercase">S'inscrire</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div style="display:block" class="text-center block">
+      <img width="100px" src="<?=$url?>/assets/img/btn-share.png" alt="">
+      <p style="font-weight:700; text-transform:uppercase">Partager</p>
+    </div>
+  </div>
+</div>
+
+
  <div class="mb-5 p-3 text-center div-grey">
       <h2 class="centered">Présentation des prix</h2>
   </div>
