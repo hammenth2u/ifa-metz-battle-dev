@@ -1,7 +1,6 @@
 <?php
 
 require_once __DIR__."/CoreController.php";
-require_once "../app/utils/DBData.php";
 
 class MainController extends CoreController {
     // notre première action : la homepage
@@ -26,8 +25,7 @@ class MainController extends CoreController {
     //     $this->show('legal');
     // }
     public function newPlayer(){
-        $conn = new DBData();
-        if($_POST['pseudo']!=''&&$_POST['lastname']!=''&&$_POST['firstname']!=''&&$_POST['gender']!=''&&$_POST['birthdate']!=''&&$_POST['email']!=''&&$_POST['address']!=''&&$_POST['city']!=''&&$_POST['postalcode']!=''){
+        if(isset($_POST['pseudo'])&&isset($_POST['lastname'])&&isset($_POST['firstname'])&&isset($_POST['gender'])&&isset($_POST['birthdate'])&&isset($_POST['email'])&&isset($_POST['address'])&&isset($_POST['city'])&&isset($_POST['postalcode'])){
             $player = new PlayerModel();
             $player->setEmail($_POST['email']);
             $player->setLastname($_POST['lastname']);
@@ -39,8 +37,8 @@ class MainController extends CoreController {
             $player->setAddress($_POST['address']);
             $player->setCity($_POST['city']);
             $player->setPostalcode($_POST['postalcode']);
-            $player->setScore($_POST['score']);
-            $conn->addData($player);
+            isset($_POST['score'])?$player->setScore($_POST['score']):$player->setScore(0);
+            $this->dbdata->addData($player);
             echo json_encode(['message'=>'ok']);
         }
         else{
@@ -48,23 +46,23 @@ class MainController extends CoreController {
         }
     }
     public function updatePlayer(){
-        $conn = new DBData();
-        $_PUT = file_get_contents('php://input');
-        if($_PUT['email']!=""){
-            $player = $conn->getDataFromMail($_PUT['email']);
-            if($_PUT['score'] > $player->getScore()){
+        parse_str(file_get_contents("php://input"),$_PUT);
+        if(isset($_PUT['email'])){
+            $player = $this->dbdata->getDataFromMail($_PUT['email']);
+            if(isset($_PUT['score']) && $_PUT['score'] > $player->getScore()){
                 $player->setScore($_PUT['score']);
             }
-            $player->setSharedtwitter($_PUT['sharedtwitter']);
-            $player->setSharedfacebook($_PUT['sharedfacebook']);
+            if(isset($_PUT['sharedtwitter']))
+                $player->setSharedtwitter($_PUT['sharedtwitter']);
+            if(isset($_PUT['sharedfacebook']))
+                $player->setSharedfacebook($_PUT['sharedfacebook']);
 
         }
 
     }
     public function getPlayer(){
-        $conn = new DBData();
-        if($_GET['email']!=""){
-            $player = $conn->getDataFromMail($_GET['email']);
+        if(isset($_GET['email'])){
+            $player = $this->dbdata->getDataFromMail($_GET['email']);
             if($player){
                 $data= [
                     'message'=>'ok',
@@ -94,25 +92,25 @@ class MainController extends CoreController {
         
     }
     public function deletePlayer(){
-        $_DELETE = file_get_contents('php://input');
-        $conn = new DBData();
+        parse_str(file_get_contents("php://input"),$_DELETE);
         if($_DELETE['email']!=""){
-            $conn->removeData($_DELETE['email']);
+            $this->dbdata->removeData($_DELETE['email']);
         }
 
         
     }
     public function getLeaderboards(){
-        $conn = new DBData();
-        if($_GET['page']!=""){
-            echo json_encode($conn->getTopScores($_GET['page']));
+        if(isset($_GET['page'])){
+            echo json_encode($this->dbdata->getTopScores($_GET['page']));
+        }
+        else{
+            echo print_r($_GET,true);
         }
     }
 
     public function connect(){
-        $conn = new DBData();
-        if($_GET['email']!=''&&$_GET['password']!=''){
-            $player = $conn->connectUser($_GET['email'],$_GET['password']);
+        if(isset($_GET['email'])&&isset($_GET['password'])){
+            $player = $this->dbdata->connectUser($_GET['email'],$_GET['password']);
             if($player){
                 $data= [
                     'message'=>'ok',

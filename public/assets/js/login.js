@@ -12,7 +12,7 @@ $('.loginForm').submit((event)=>{
         success: function(data){
             data = JSON.parse(data);
             if(data.message == 'ok'){
-                let user = [];
+                let user = {};
                 user['pseudo'] = data.pseudo;
                 user['email'] = data.email;
                 user['lastname'] = data.lastname;
@@ -25,8 +25,8 @@ $('.loginForm').submit((event)=>{
                 user['score'] = data.score;
                 user['sharedfacebook'] = data.sharedfacebook;
                 user['sharedtwitter'] = data.sharedtwitter;
-                window.sessionStorage.setItem('user',user);
-                window.location.href('/game');
+                window.sessionStorage.setItem('user',JSON.stringify(user));
+                window.location.href = '/game';
                 
             }
             else{

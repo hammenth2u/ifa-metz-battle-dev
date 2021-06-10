@@ -1,11 +1,11 @@
 $('.registerForm').submit((event)=>{
     event.preventDefault();
     let birthdate= new Date($('#birthdate').val());
-    if(Date.now().getFullYear-birthdate.getFullYear() < 18){
+    if(new Date().getFullYear()-birthdate.getFullYear() < 18){
         alert('Désolés, mais ce jeu-concours est accessible uniquement aux personnes de plus de 18 ans.');
-        window.location.href('/');
+        window.location.href = "/";
     }
-    birthdate = birthdate.getFullYear()+'-'+birthdate.getMonth()+"-"+birthdate.getDay();
+    birthdate = birthdate.getFullYear()+'-'+(birthdate.getMonth()+1)+"-"+birthdate.getDate();
     let pseudo = $('#pseudo').val();
     let lastname = $('#lastname').val();
     let firstname = $('#firstname').val();
@@ -35,7 +35,7 @@ $('.registerForm').submit((event)=>{
         success: function(data){
             data = JSON.parse(data);
             if(data.message == 'ok'){
-                let user = [];
+                let user = {};
                 user['pseudo'] = pseudo;
                 user['email'] = email;
                 user['lastname'] = lastname;
@@ -48,8 +48,8 @@ $('.registerForm').submit((event)=>{
                 user['score'] = score;
                 user['sharedfacebook'] = 0;
                 user['sharedtwitter'] = 0;
-                window.sessionStorage.setItem('user',user);
-                window.location.href('/game');
+                window.sessionStorage.setItem('user',JSON.stringify(user));
+                window.location.href ='/game';
                 
             }
             else{

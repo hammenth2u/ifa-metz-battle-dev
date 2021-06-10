@@ -79,7 +79,7 @@ class DBData {
 
     //Insérer un nouveau profil
     public function addData($player){;
-        $this->dbh->exec("INSERT INTO player (pseudo, lastname, firstname, birthdate, email, address, city, postalcode, gender, score, sharedtwitter, sharedfacebook) VALUES ('{$player->getPseudo()}','{$player->getLastName()}','{$player->getFirstName()}','{$player->getBirthdate()}','{$player->getEmail()}','{$player->getAddress()}','{$player->getCity()}','{$player->getPostalcode()}','{$player->getGender()}',{$player->getScore()},0,0)");
+        $this->dbh->exec("INSERT INTO player (pseudo, password, lastname, firstname, birthdate, email, address, city, postalcode, gender, score, sharedtwitter, sharedfacebook) VALUES ('{$player->getPseudo()}','{$player->getPassword()}','{$player->getLastName()}','{$player->getFirstName()}','{$player->getBirthdate()}','{$player->getEmail()}','{$player->getAddress()}','{$player->getCity()}','{$player->getPostalcode()}','{$player->getGender()}',{$player->getScore()},0,0)");
     }
 
     //Modifier un profil
