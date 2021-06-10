@@ -3,7 +3,7 @@ $('.loginForm').submit((event)=>{
     let mel = $('.loginEmail').val();
     let pass = $('.loginPassword').val();
     $.ajax({
-        url:'/api/connect',
+        url:'/ifa-metz-battle-dev/public/api/connect',
         method:'GET',
         data:{
             email: mel,
@@ -26,7 +26,7 @@ $('.loginForm').submit((event)=>{
                 user['sharedfacebook'] = data.sharedfacebook;
                 user['sharedtwitter'] = data.sharedtwitter;
                 window.sessionStorage.setItem('user',JSON.stringify(user));
-                window.location.href = '/game';
+                window.location.href = '/ifa-metz-battle-dev/public/game';
                 
             }
             else{

@@ -3,7 +3,7 @@ $('.registerForm').submit((event)=>{
     let birthdate= new Date($('#birthdate').val());
     if(new Date().getFullYear()-birthdate.getFullYear() < 18){
         alert('Désolés, mais ce jeu-concours est accessible uniquement aux personnes de plus de 18 ans.');
-        window.location.href = "/";
+        window.location.href = "/ifa-metz-battle-dev/public/";
     }
     birthdate = birthdate.getFullYear()+'-'+(birthdate.getMonth()+1)+"-"+birthdate.getDate();
     let pseudo = $('#pseudo').val();
@@ -17,7 +17,7 @@ $('.registerForm').submit((event)=>{
     let password = $('#password').val();
     let score = $('#score').val();
     $.ajax({
-        url:'/api/player',
+        url:'/ifa-metz-battle-dev/public/api/player',
         method:'POST',
         data:{
             email: email,
@@ -49,7 +49,7 @@ $('.registerForm').submit((event)=>{
                 user['sharedfacebook'] = 0;
                 user['sharedtwitter'] = 0;
                 window.sessionStorage.setItem('user',JSON.stringify(user));
-                window.location.href ='/game';
+                window.location.href ='/ifa-metz-battle-dev/public/game';
                 
             }
             else{
