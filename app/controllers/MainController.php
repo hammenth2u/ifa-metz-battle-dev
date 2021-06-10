@@ -20,6 +20,10 @@ class MainController extends CoreController {
         $this->show('register');
     }
 
+    public function charts() {
+        $this->show('chart');
+    }
+
 
     // public function legalMentions() {
     //     $this->show('legal');
@@ -147,6 +151,19 @@ class MainController extends CoreController {
             echo json_encode(['message'=>'ko']);
         }
     }
+
+    public function getGenderHomme() {
+        echo json_encode($this->dbdata->getGenderHomme());
+    }
+
+    public function getGenderFemme() {
+        echo json_encode($this->dbdata->getGenderFemme());
+    }
+
+    public function getGenderAutre() {
+        echo json_encode($this->dbdata->getGenderAutre());
+    }
+
 
     public function error() {
         // on modifie "l'enveloppe" HTTP pour changer le code de réponse

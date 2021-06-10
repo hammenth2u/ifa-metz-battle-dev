@@ -1,0 +1,40 @@
+.chart_gender{
+    height: 45%;
+    width: 45%;
+    margin : 2%;
+    border : 1px black solid;
+}
+
+.chart_age{
+    height: 45%;
+    width: 45%;
+    margin: 2%;
+    border : 1px black solid;
+}
+
+#charts{
+    display: flex;
+    height: 78%;
+    width: 100%;
+}
+
+.abscisse{
+    height: 10%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+
+.all_barre {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+

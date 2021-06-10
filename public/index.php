@@ -21,6 +21,7 @@ $router->map('GET', '/', 'MainController::home');
 $router->map('GET', '/game', 'MainController::game');
 $router->map('GET', '/login', 'MainController::login');
 $router->map('GET', '/register', 'MainController::register');
+$router->map('GET', '/charts', 'MainController::charts');
 
 
 //routes de l'api
@@ -32,6 +33,9 @@ $router->map('PUT', '/api/player', 'MainController::updatePlayer');
 $router->map('GET', '/api/connect', 'MainController::connect');
 $router->map('GET','/api/ages', 'MainController::getByAge');
 
+$router->map('GET', '/api/genders/homme', 'MainController::getGenderHomme');
+$router->map('GET', '/api/genders/femme', 'MainController::getGenderFemme');
+$router->map('GET', '/api/genders/autre', 'MainController::getGenderAutre');
 
 $match = $router->match();
 

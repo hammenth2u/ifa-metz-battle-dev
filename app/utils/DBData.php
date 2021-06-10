@@ -103,6 +103,19 @@ class DBData {
 
         return $this->dbh->query("SELECT * FROM player WHERE DATEDIFF(birthdate,'{$datelower->format('Y-m-d')}') <= 0 AND DATEDIFF(birthdate,'{$dateupper->format('Y-m-d')}') >= 0")->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getGenderHomme() {
+        return $this->dbh->query("SELECT count(*) as nbHommes FROM player WHERE gender = 'Homme'")->fetchObject();
+    }
+
+    public function getGenderFemme() {
+        return $this->dbh->query("SELECT count(*) as nbFemmes FROM player WHERE gender = 'Femme'")->fetchObject(); 
+    }
+
+    public function getGenderAutre() {
+        return $this->dbh->query("SELECT count(*) as nbAutres FROM player WHERE gender = 'Autre'")->fetchObject();
+    }
+    
     
     // /**
     //  * Méthode permettant de retourner les données sur une marque donnée

@@ -51,6 +51,7 @@
   <script src="<?=$url?>/assets/lib/countdown/jquery.countdown.min.js"></script>
   <script src="<?=$url?>/assets/js/app.js"></script>
   <script src="<?=$url?>/assets/js/login.js"></script>
+  <script src="<?=$url?>/assets/js/gender.js"></script>
   <script src="<?=$url?>/assets/js/register.js"></script>
 
 </body>
