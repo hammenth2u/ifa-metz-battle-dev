@@ -1,6 +1,6 @@
 
 #app {
-    height: 80%;
+    height: 78%;
     width: 100%;
     background: linear-gradient(0.25turn,#3c96fc,#7cb4f4, #3c96fc );
     }
@@ -148,6 +148,12 @@
 p{
     text-align: center;
 }
+h5{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
 
 .lien{
     color : #7cb4f4;
@@ -271,5 +277,19 @@ to {
         height: 22%;
         width: 20%;
         z-index: 50;
+    }
+    .ball{
+        height: 18%;
+        width: 9%;
+        top : 65%;
+        background-image:
+            url('../img/ball.png');
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        z-index: 5;
+        position: absolute;
+        animation: linear 1s infinite spin;
     }
  }
