@@ -123,17 +123,30 @@
 }
 
 .ball{
-    position: absolute;
+    height: 18%;
+    width: 9%;
     top : 70%;
-    height: 15%;
+    background-image:
+        url('../img/ball.png');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    z-index: 5;
+    position: absolute;
     animation: linear 1s infinite spin;
 }
 
 .button_start{
     display: flex;
     height: 100%;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+}
+
+p{
+    text-align: center;
 }
 
 .lien{

@@ -31,36 +31,34 @@ var app = new Vue({
                 this.nb_partie +=1
                 this.number = Math.floor(Math.random() * 3);
                 if (this.number === 0 && direction === 'center'){
-                    this.lost = true
                     this.shoot = false
+                    this.lost = true
                     this.goal_center = true
                     setTimeout(() => this.newPartie() , 2500)
                     
                 }
                 else if (this.number === 1 && direction ==='rigth'){
-                    this.lost = true
                     this.shoot = false
+                    this.lost = true
                     this.goal_right = true
                     setTimeout(() => this.newPartie() , 2500)
     
                 }
                 else if (this.number === 2 && direction ==='left') {
-                    this.lost = true
                     this.shoot = false
+                    this.lost = true
                     this.goal_left = true
                     setTimeout(() => this.newPartie(), 2500)
     
                 }  else {
+                    this.shoot = false
                     this.nb_win +=1
                     this.win = true
-                    this.shoot = false
                     this.goal_win = true
                     setTimeout(() => this.newPartie(), 2500)
                 }
             },
-                1000)
-            
-            
+                1500)
         },
         start(value) {
             this.game = value

@@ -3,6 +3,10 @@
 
 <div id='app'>
     <div v-if="game === false && restart === false" class="button_start">
+        <div>
+            <h4> Choisissez votre direction de frappe pour essayer de tromper le gardien </h4>
+            <p> Attention - La position du gardien sera défini aléatoirement par un algorithme </p>
+        </div>
         <button class='start btn btn-primary btn-large-custom ' v-on:click="start(true)"> START </button>
     </div>
     <div v-if="game === false && restart === true" class="button_start">
@@ -19,7 +23,7 @@
                 <img src="<?=$url?>/assets/img/lost.png" alt="lost image" />
             </div>
             <div class="ball_container" v-if="shoot">
-                <img class="ball" src="<?=$url?>/assets/img/ball.png" alt="ballon" />
+                <div class="ball"> </div>
             </div>
             <div class="fleche" v-if="fleche">
                 <img class="fleche_item" src="<?=$url?>/assets/img/left.png" alt='fleche gauche' v-on:click="choiceDirection('left')" />   
