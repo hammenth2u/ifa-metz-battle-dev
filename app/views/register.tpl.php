@@ -46,40 +46,40 @@ button{
 <form class="registerForm">
   <div class="form-group pb-3">    
     <label>Pseudo: </label> 
-    <input type="text" placeholder="Pseudo" class="form-control registerPseudo" id="pseudo" name="pseudo" aria-describedby="emailHelp" name='email'>   
+    <input type="text" placeholder="Pseudo" class="form-control registerPseudo" id="pseudo" name="pseudo" >   
   </div>
   <div class="form-group pb-3">   
     <label>Nom :</label>  
-    <input type="text" placeholder="Nom" class="form-control registerLastname" id="lastname" name="lastname" aria-describedby="emailHelp" name='email'>   
+    <input type="text" placeholder="Nom" class="form-control registerLastname" id="lastname" name="lastname"  >   
   </div>
   <div class="form-group pb-3"> 
     <label>Prénom :</label>    
-    <input type="text" placeholder="Prénom" class="form-control registerFirstname" id="firstname" name="firstname" aria-describedby="emailHelp" name='email'>   
+    <input type="text" placeholder="Prénom" class="form-control registerFirstname" id="firstname" name="firstname" >   
   </div>
   <div class="form-group pb-3">    
     <label>Email :</label>   
-    <input type="email" placeholder="Email" class="form-control registerEmail" id="email" name="email" aria-describedby="emailHelp" name='email'>   
+    <input type="email" placeholder="Email" class="form-control registerEmail" id="email" name="email" aria-describedby="emailHelp" >   
   </div>
   <div class="form-group pb-3"> 
     <label>Date de naissance :</label>   
-    <input type="date" placeholder="" class="form-control registerBirthdate" id="birthdate" name="birthdate" aria-describedby="emailHelp" name='email'>   
+    <input type="date" placeholder="" class="form-control registerBirthdate" id="birthdate" name="birthdate" >   
   </div>
   <div class="form-group pb-3">    
     <label>Adresse :</label>   
-    <input type="text" placeholder="Adresse" class="form-control registerAddress" id="address" name="address" aria-describedby="emailHelp" name='email'>   
+    <input type="text" placeholder="Adresse" class="form-control registerAddress" id="address" name="address" >   
   </div>
   <div class="form-group pb-3">    
     <label>Code postal :</label>   
-    <input type="text" placeholder="Code postal" class="form-control registerPostalcode" id="postalcode" name="postalcode" aria-describedby="emailHelp" name='email'>   
+    <input type="text" placeholder="Code postal" class="form-control registerPostalcode" id="postalcode" name="postalcode"  >   
   </div>
   <div class="form-group pb-3">    
     <label>Ville :</label>   
-    <input type="text" placeholder="Ville" class="form-control registerCity" id="city" name="city" aria-describedby="emailHelp" name='email'>   
+    <input type="text" placeholder="Ville" class="form-control registerCity" id="city" name="city" >   
   </div>
   <div class="form-grouppb-3">
             <div class="radio">
                 <label>
-      <input type="radio" name="radio-input" checked="checked"> Femme
+      <input type="radio" name="radio-input" checked="checked" value="Femme"> Femme
       <span class="checkmark"></span>
       </label>
             </div>
@@ -87,7 +87,7 @@ button{
         <div class="form-group pb-3">
             <div class="radio">
                 <label>
-      <input type="radio" name="radio-input"> Homme
+      <input type="radio" name="radio-input" value="Homme"> Homme
       <span class="checkmark"></span>
       </label>
             </div>
@@ -95,7 +95,7 @@ button{
         <div class="form-group pb-3">
             <div class="radio">
                 <label>
-      <input type="radio" name="radio-input"> Autre
+      <input type="radio" name="radio-input" value="Autre"> Autre
       <span class="checkmark"></span>
       </label>
             </div>
@@ -103,7 +103,7 @@ button{
 
   <div class="form-group pb-3">   
     <label>Mot de passe :</label> 
-    <input type="password" placeholder="Mot de passe" class="form-control registerPassword" id="password" name="password" name="password">
+    <input type="password" placeholder="Mot de passe" class="form-control registerPassword" id="password" name="password" >
   </div>
   <div class="d-flex align-items-center justify-content-between">
 </div>
