@@ -13,15 +13,16 @@ var app = new Vue({
       goal_center : false , 
       goal_right : false , 
       goal_win : false,
-      restart : false
+      restart : false,
+      fleche : true,
+      link : false
     },
     methods: {
         choiceDirection(direction) {
-            if (this.nb_partie === 5 && this.nb_win > 2) {
-                window.location.href = '/register'
-            }
             this.shoot = true
+            this.fleche = false
             this.goal = false 
+            this.link = true
             setTimeout(() => {
                 if (this.win || this.lost) {
                     this.win = false 
@@ -66,16 +67,18 @@ var app = new Vue({
         },
         newPartie() {
             this.goal = true
+            this.fleche = true
+            this.link = false
             this.win = false 
             this.lost = false
             this.goal_center = false 
             this.goal_right = false 
             this.goal_left = false 
             this.goal_win = false 
-            if (this.nb_partie === 5 && this.nb_win > 4) {
+            if (this.nb_partie === 5 && this.nb_win > 2) {
                 window.location.href = '/register'
             }
-            if (this.nb_partie === 5 && this.nb_win < 4) {
+            if (this.nb_partie === 5 && this.nb_win < 3) {
                 this.restart = true
                 this.game = false 
             }
