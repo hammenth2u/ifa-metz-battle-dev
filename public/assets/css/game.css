@@ -139,8 +139,8 @@
 .lien{
     color : #7cb4f4;
     position : absolute;
-    bottom: 6%;
-    font-size: smaller;
+    bottom: 0;
+    font-size: 2%;
 }
 
 @keyframes spin {

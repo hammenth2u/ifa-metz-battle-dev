@@ -34,28 +34,28 @@ var app = new Vue({
                     this.lost = true
                     this.shoot = false
                     this.goal_center = true
-                    setTimeout(() => this.newPartie() , 2000)
+                    setTimeout(() => this.newPartie() , 2500)
                     
                 }
                 else if (this.number === 1 && direction ==='rigth'){
                     this.lost = true
                     this.shoot = false
                     this.goal_right = true
-                    setTimeout(() => this.newPartie() , 2000)
+                    setTimeout(() => this.newPartie() , 2500)
     
                 }
                 else if (this.number === 2 && direction ==='left') {
                     this.lost = true
                     this.shoot = false
                     this.goal_left = true
-                    setTimeout(() => this.newPartie(), 2000)
+                    setTimeout(() => this.newPartie(), 2500)
     
                 }  else {
                     this.nb_win +=1
                     this.win = true
                     this.shoot = false
                     this.goal_win = true
-                    setTimeout(() => this.newPartie(), 2000)
+                    setTimeout(() => this.newPartie(), 2500)
                 }
             },
                 1000)
@@ -76,7 +76,7 @@ var app = new Vue({
             this.goal_left = false 
             this.goal_win = false 
             if (this.nb_partie === 5 && this.nb_win > 2) {
-                window.location.href = 'ifa-metz-battle-dev/public/register'
+                window.location.href = '/ifa-metz-battle-dev/public/register'
             }
             if (this.nb_partie === 5 && this.nb_win < 3) {
                 this.restart = true
@@ -85,7 +85,7 @@ var app = new Vue({
         },
         restart_function(value){
             this.restart = false
-            window.location.href='ifa-metz-battle-dev/public/game'
+            window.location.href='/ifa-metz-battle-dev/public/game'
         }
     }
   })
