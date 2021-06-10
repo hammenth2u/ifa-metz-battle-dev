@@ -94,6 +94,15 @@ class DBData {
     public function connectUser($email, $password){
         return $this->dbh->query("SELECT * FROM player WHERE email = '{$email}' AND password = '{$password}'")->fetchObject("PlayerModel");
     }
+
+    public function ageBetween($lower,$upper){
+        $datelower = new DateTime();
+        $datelower->setDate($datelower->format('Y')-$lower,$datelower->format('m'),$datelower->format('d'));
+        $dateupper = new DateTime();
+        $dateupper->setDate($dateupper->format('Y')-$upper,$dateupper->format('m'),$dateupper->format('d'));
+
+        return $this->dbh->query("SELECT * FROM player WHERE DATEDIFF(birthdate,'{$datelower->format('Y-m-d')}') <= 0 AND DATEDIFF(birthdate,'{$dateupper->format('Y-m-d')}') >= 0")->fetchAll(PDO::FETCH_ASSOC);
+    }
     
     // /**
     //  * Méthode permettant de retourner les données sur une marque donnée

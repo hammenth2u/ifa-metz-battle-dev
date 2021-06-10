@@ -138,6 +138,16 @@ class MainController extends CoreController {
         }
     }
 
+    public function getByAge(){
+        if(isset($_GET['lower'])&&isset($_GET['upper'])){
+            $users = $this->dbdata->ageBetween($_GET['lower'],$_GET['upper']);
+            echo json_encode(['result'=>$users,'message'=>'ok']);
+        }
+        else{
+            echo json_encode(['message'=>'ko']);
+        }
+    }
+
     public function error() {
         // on modifie "l'enveloppe" HTTP pour changer le code de réponse
         // de base, le code est 200 (OK) mais ici on veut informer le client de son erreur

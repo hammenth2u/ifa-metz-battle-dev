@@ -30,6 +30,7 @@ $router->map('GET', '/api/player', 'MainController::getPlayer');
 $router->map('GET', '/api/players', 'MainController::getLeaderboards');
 $router->map('PUT', '/api/player', 'MainController::updatePlayer');
 $router->map('GET', '/api/connect', 'MainController::connect');
+$router->map('GET','/api/ages', 'MainController::getByAge');
 
 
 $match = $router->match();
