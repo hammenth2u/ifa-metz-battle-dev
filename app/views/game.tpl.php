@@ -5,7 +5,7 @@
     <div v-if="game === false && restart === false" class="button_start">
         <div>
             <h4> Choisissez votre direction de frappe pour essayer de tromper le gardien </h4>
-            <h5> Vous pouvez jouer 5 parties , si vous en remporté au moins 3 , vous participerez au tirage au sort pour remporté un lot ! </h5>
+            <h5> Vous pouvez jouer 5 parties , si vous en remportez au moins 3 , vous participerez au tirage au sort pour remporter un lot ! </h5>
             <p> Attention - La position du gardien sera définie aléatoirement par un algorithme </p>
         </div>
         <button class='start btn btn-primary btn-large-custom ' v-on:click="start(true)"> START </button>

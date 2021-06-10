@@ -41,7 +41,7 @@ button{
 <div class="row m-5 no-gutters shadow-lg">
 
 <div class="col-md-12 bg-white p-5">
-<h3 class="pb-3">Veuillez vous inscrire pour tenter de gagnez un prix</h3>
+<h3 class="pb-3">Inscrivez-vous et tentez de gagner un prix</h3>
 <div class="form-style">
 <form class="registerForm">
   <div class="form-group pb-3">    
