@@ -82,6 +82,9 @@ tarteaucitron.services.mycustomservice = {
     // when use deny cookie
   }
 };
+
+(tarteaucitron.job = tarteaucitron.job || []).push('youtube');
+        
 </script>
 </head>
 
